@@ -1,16 +1,17 @@
 plugins {
     id 'java-gradle-plugin'
     id "com.gradle.plugin-publish" version "0.14.0"
+    id 'maven-publish'
 }
 
-group 'com.github.vlsergey.springdatarest2typescript'
+group 'io.github.cslauritsen.springdatarest2typescript'
 
 gradlePlugin {
     plugins {
-	springdatarest2typescript {
-	    id = 'com.github.vlsergey.generate-spring-data-rest-typescripts-defs'
-	    implementationClass = 'com.github.vlsergey.springdatarest2typescript.PluginImpl'
-	}
+        springdatarest2typescript {
+            id = 'io.github.cslauritsen.generate-spring-data-rest-typescripts-defs'
+            implementationClass = 'io.github.cslauritsen.springdatarest2typescript.PluginImpl'
+        }
     }
 }
 
@@ -28,20 +29,20 @@ dependencies {
 }
 
 pluginBundle {
-    website = 'https://github.com/vlsergey/generate-spring-data-rest-typescripts-defs'
-    vcsUrl = 'https://github.com/vlsergey/generate-spring-data-rest-typescripts-defs.git'
+    website = 'https://github.com/cslauritsen/generate-spring-data-rest-typescripts-defs'
+    vcsUrl = 'https://github.com/cslauritsen/generate-spring-data-rest-typescripts-defs.git'
     description = 'Gradle plug-in to generate TypeScript definitions of Spring Data REST entities'
     tags = ['spring', 'hateoas', 'rest', 'typescript', 'codegeneration']
 
     mavenCoordinates {
-	groupId = project.group.toString()
-	artifactId = project.name
-	version = project.version.toString()
+        groupId = project.group.toString()
+        artifactId = project.name
+        version = project.version.toString()
     }
 
     plugins {
-	springdatarest2typescript {
-	    displayName = 'Generate Spring Data REST TypeScript definitions'
-	}
+        springdatarest2typescript {
+            displayName = 'Generate Spring Data REST TypeScript definitions'
+        }
     }
 }

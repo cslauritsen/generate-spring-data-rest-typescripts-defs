@@ -1,4 +1,4 @@
-package com.github.vlsergey.springdatarest2typescript;
+package io.github.cslauritsen.springdatarest2typescript;
 
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
